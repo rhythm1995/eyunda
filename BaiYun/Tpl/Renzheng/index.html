@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>柏运网</title>
+    <meta charset="utf-8">
+    <script src="__ROOT__/baiyun/Public/js/jquery-2.1.4.js"></script>
+	<link rel="stylesheet" href="__ROOT__/baiyun/Public/css/button.css">
+	<link rel="stylesheet" href="__ROOT__/baiyun/Public/css/bootstrap.css">
+	<script src="__ROOT__/baiyun/Public/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="__ROOT__/baiyun/Public/css/authenticationstylesheet.css">
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="https://cdn1.lncld.net/static/js/av-mini-0.5.5.js"></script>
+    <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.5.5.js"></script>
+    <script type="text/javascript">
+      AV.initialize("1z946wrdpudl4b5vh30e5rgbnzngsi6g7xpe14mlpk27r7z9", "ulbpsv497wuubhpappxai4mc8s9676k41zuysk7xlkgxjyh8");
+    </script>
+</head>
+
+<body style="background:rgb(245,245,245);">
+<volist name='user' id='l'>
+	<div class="top">
+		<ul id="top_ul">
+			<a href=""><li id="gerenzhongxin">个人中心</li></a>
+			<a href=""></a>
+		</ul>
+		<p id="top_text"><span class="glyphicon glyphicon-user"></span><{$l.username}><i id="phonenumber"><{$l.phone}></i>
+		<if condition="$l.iscarowner eq 1"> <i id="chezhurenzhen">车主认证</i> <else /> </if>，欢迎使用柏运物流！</p>
+	</div>
+</volist>
+	<div id="top_background" style="background:url('__ROOT__/baiyun/Public/img/background.png')">
+		<img src="__ROOT__/baiyun/Public/img/logotext.png" id="logo_img">
+		<ul class="litop">
+			<a href="__ROOT__/baiyun/index.php/Goods/index.html" class="button button-uppercase button-primary">找货</a>
+			<a href="__ROOT__/baiyun/index.php/Cars/index.html" class="button button-uppercase button-primary">找车</a>
+			<a href="__ROOT__/baiyun/index.php/Publish/goods.html" class="button button-uppercase button-primary">发货</a>
+			<a href="__ROOT__/baiyun/index.php/Publish/cars.html" class="button button-uppercase button-primary">发车</a>
+			<a href="__ROOT__/baiyun/index.php/Renzheng/index.html" class="button button-uppercase button-primary">车主认证</a>
+			<a href="__ROOT__/baiyun/index.php/MySelf/index.html" class="button button-uppercase button-primary">我的账户</a>
+		</ul>
+	</div>
+	<div style="width:100%;padding:10px;padding-left:10%;padding-right:10%;box-shadow:0px 0px 1px 2px RGB(27,154,247);float:left;margin-top:-20px;">
+
+	<div style="width:100%;box-shadow:0px 0px 1px 1px #ddd;padding:10px;float:left;background:#fff;">
+	<p style="margin:0px;color:RGB(27,154,247);">车主认证</p>
+	<hr style="margin-top:5px;">
+		<div id="dange_renzhen1" style="width:100%;padding-bottom:10px;padding-left:30px;padding-right:30px;">
+
+		<style type="text/css">
+			#imghead {filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=image);}
+		</style>
+			<div style="width:100%;float:left;">
+			<h1 style="width:100%;float:left;margin:0px;color:RGB(27,154,247);">E运达车主认证</h1>
+			<p style="width:100%;float:left;margin-top:10px;margin-bottom:10px;	">说明： 1、以下信息请详细如实填写。 2、以上所有上传证件请保证号码清晰可见。 3、以上所有证件提供复印件及加盖公司公章。 4、每车填写一张表格。 5、以上信息如有需更改请及时变更填写审核表。 6、牵引商用车一头一架为一组评分。 7、以下评分经人工审核后不低于85分方可入网。</p>
+			</div>
+			<hr style="width:100%;">
+			<form id="rengz" action="Renzheng_do" method="post" enctype="multipart/form-data" style="width:100%;">
+			<p style="width:100%;float:left;color:RGB(27,154,247);font-size:20px;">户名：</p>
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc1" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead1" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/企业法人营业执照.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>营业执照</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc1'),'imghead1')" />
+						<input name="danweimingcheng" style="margin-top:10px;" class="form-control" placeholder="单位名称"/>
+						<input name="danweidizhi" style="margin-top:10px;" class="form-control" placeholder="单位地址"/>
+					</div>
+				</div>
+
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc2" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead2" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/组织机构代码证.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>组织机构代码证</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc2'),'imghead2')" />
+					</div>
+				</div>
+
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc3" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead3" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/税务登记证.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>税务登记证</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc3'),'imghead3')" />
+					</div>
+				</div>
+
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc4" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead4" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/身份证.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>法人身份证</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc4'),'imghead4')" />
+						<input name="faren" style="margin-top:10px;" class="form-control" placeholder="法人"/>
+						<input name="farenshenfenzheng" style="margin-top:10px;" class="form-control" placeholder="法人身份证"/>
+						<input name="farendizhi" style="margin-top:10px;" class="form-control" placeholder="法人地址"/>
+					</div>
+				</div>
+
+				<hr style="width:100%;">
+				<p style="color:RGB(27,154,247);font-size:20px;">商用车辆进网信息</p>
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc5" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead5" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/行驶证.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>行驶证</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc5'),'imghead5')" />
+						<input name="jinwangchexing" style="margin-top:10px;" class="form-control" placeholder="进网车型"/>
+						<input name="chetouhao" style="margin-top:10px;" class="form-control" placeholder="车头号"/>
+						<input name="chejiahao" style="margin-top:10px;" class="form-control" placeholder="车架号"/>
+					</div>
+				</div>
+
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc6" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead6" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/运营证.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>运营证</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc6'),'imghead6')" />
+						<input name="yunyingzhengyouxiaoqi" style="margin-top:10px;" class="form-control" placeholder="有效期"/>
+						<input name="yunyingzhengxiacinianjianriqi" style="margin-top:10px;" class="form-control" placeholder="下次年检日期"/>
+					</div>
+				</div>
+
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc7" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead7" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/保险单.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>保险单</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc7'),'imghead7')" />
+						<input name="baoxiandanyouxiaoqi" style="margin-top:10px;" class="form-control" placeholder="有效期"/>
+						<input name="baoxiandanxiacinianjianriqi" style="margin-top:10px;" class="form-control" placeholder="下次年检日期"/>
+					</div>
+				</div>
+				<hr style="width:100%;">
+
+				<p style="color:RGB(27,154,247);font-size:20px;">驾驶员进网信息</p>
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<input name="zhunjiachexing" style="width:20%;float:left;" class="form-control" placeholder="准驾车型">
+					<input name="jiashiyuanxingming" style="width:20%;float:left;margin-left:10px;" class="form-control" placeholder="驾驶员姓名">
+				</div>
+
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc8" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead8" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/身份证.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>身份证</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc8'),'imghead8')" />
+						<input name="jiashiyuanshenfenzhenghao" style="margin-top:10px;" class="form-control" placeholder="身份证号"/>
+						<input name="jiashiyuanyouxiaoqi" style="margin-top:10px;" class="form-control" placeholder="有效期至"/>
+						<input name="jiashiyuanzhuzhi" style="margin-top:10px;" class="form-control" placeholder="住址"/>
+					</div>
+				</div>
+
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc9" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead9" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/驾驶证.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>驾驶证</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc9'),'imghead9')" />
+						<input name="jiashizhenghaoma" style="margin-top:10px;" class="form-control" placeholder="证件号码"/>
+						<input name="jiashizhengyouxiaoqi" style="margin-top:10px;" class="form-control" placeholder="有效期至"/>
+						<input name="jiashizhengshenhe" style="margin-top:10px;" class="form-control" placeholder="下次审核日期"/>
+					</div>
+				</div>
+
+				<div style="width:100%;float:left;margin-bottom:10px;border:solid 1px #e3e3e3;padding:5px;">
+					<div id="sc10" style="width:300px;height:200px;border:1px solid #eee;overflow:hidden;float:left;">
+    					<img id="imghead10" style="width:300px;height:200px;border:none;"src='__ROOT__/baiyun/Public/img/renzheng/从业资格证.jpg'>
+					</div>
+					<div style="float:left;margin-left:10px;height:200px;width:30%;border:solid 1px #eee;padding:5px;">
+						<label>从业资格证</label>
+						<input id="openfile1" name="f[]" type="file" onchange="previewImage(this,document.getElementById('sc10'),'imghead10')" />
+						<input name="congyezigezhenghaoma" style="margin-top:10px;" class="form-control" placeholder="证件号码"/>
+						<input name="congyezigezhengyouxiaoqi" style="margin-top:10px;" class="form-control" placeholder="有效期至"/>
+						<input name="congyezigezhengshenhe" style="margin-top:10px;" class="form-control" placeholder="下次审核日期"/>
+					</div>
+				</div>				
+			</form>
+			<hr style="width:100%;">
+			<div style="width:100%;float:left;">
+				<center>
+				<input id="mod" placeholder="验证码" name="mod" class="button button-pill button-primary" style="margin-top:5px;width:20%;height:40px;">
+				<volist name='user' id='l'>
+				<input id="phone" value="<{$l.phone}>" type='hidden'>
+				</volist>
+    			<button class="button button-action button-pill" style="margin-top:15px;width:20%;height:40px;" onclick="modify(document.getElementById('phone'))">获取验证码</button>
+				</center>
+				<script type="text/javascript">
+    			var modify=function(phonenumber){
+				var phone = phonenumber.value;
+      			AV.Cloud.requestSmsCode(phone).then(function(){
+           			document.getElementById('mod').placeholder="验证码已发送至您的手机";
+      			}, function(err){
+             		document.getElementById('mod').placeholder="验证码发送失败，请重试";
+      			});
+				} 
+    			</script>
+			</div>
+			<div style="width:100%;float:left;">
+				<center>
+				<button onclick="tijiao()" class="button button-action button-pill" style="margin-top:15px;width:20%;height:40px;">提交认证信息</button>
+				</center>
+				<script type="text/javascript">
+				var tijiao = function(){
+					
+				 AV.Cloud.verifySmsCode(document.getElementById('mod').value, document.getElementById('phone').value).then(function(){
+                        //验证成功
+                        document.getElementById('rengz').submit();
+                        }, function(err){
+                         document.getElementById('mod').innerText="验证码错误";
+                      });
+				 }
+				</script>
+			</div>
+		</div>
+
+	</div>
+	</div>
+
+
+	<div id="bot">
+	    <div id="bot_inside">
+			<img id="bot_img" src="__ROOT__/baiyun/Public/img/logo_bot.png">
+			<p id="bot_text">Copyright@2015&nbsp;&nbsp;上海柏运物流版权所有&nbsp;&nbsp;&nbsp; powered by Nodex</p>
+		</div>
+	</div>
+
+</body>
+
+<script type="text/javascript">  
+function previewImage(file,container,head)  
+{  
+  var MAXWIDTH  = 300;  
+  var MAXHEIGHT = 200;  
+  var div = container;  
+  if (file.files && file.files[0])  
+  {  
+    div.innerHTML = '<img id='+head+'>';  
+    var img = document.getElementById(head); 
+    img.onload = function(){  
+      var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);  
+      img.width = rect.width;  
+      img.height = rect.height;  
+      img.style.marginLeft = rect.left+'px';  
+      img.style.marginTop = rect.top+'px';  
+    }  
+    var reader = new FileReader();  
+    reader.onload = function(evt){img.src = evt.target.result;}  
+    reader.readAsDataURL(file.files[0]);  
+  }  
+  else  
+  {  
+    var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';  
+    file.select();  
+    var src = document.selection.createRange().text;  
+    div.innerHTML = '<img id='+head+'>';  
+    var img = document.getElementById(head);  
+    img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;  
+    var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);  
+    status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);  
+    div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;margin-left:"+rect.left+"px;"+sFilter+src+"\"'></div>";  
+  }  
+}  
+function clacImgZoomParam( maxWidth, maxHeight, width, height ){  
+    var param = {top:0, left:0, width:width, height:height};  
+    if( width>maxWidth || height>maxHeight )  
+    {  
+        rateWidth = width / maxWidth;  
+        rateHeight = height / maxHeight;  
+          
+        if( rateWidth > rateHeight )  
+        {  
+            param.width =  maxWidth;  
+            param.height = Math.round(height / rateWidth);  
+        }else  
+        {  
+            param.width = Math.round(width / rateHeight);  
+            param.height = maxHeight;  
+        }  
+    }  
+      
+    param.left = Math.round((maxWidth - param.width) / 2);  
+    param.top = Math.round((maxHeight - param.height) / 2);  
+    return param;  
+}  
+</script>
+</html>

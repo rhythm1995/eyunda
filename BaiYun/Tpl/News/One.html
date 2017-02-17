@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<Volist name="new" id="a" >
+	<title>柏运新闻-<{$a.title}></title>
+	</Volist>
+</head>
+<body style="margin:0px;">
+	<div style="margin:0px;padding:0px;background:#222222;background-size:0.3% 100%;height:70px;border-bottom:solid 2px #aaa;z-index:10;">
+	<img src="__ROOT__/baiyun/Public/img/logo/baiyun.png" style="margin-left:100px;height:70px;width:70px;float:left;">
+	<p style="color:#fff;float:left;height:70px;line-height:70px;font-size:30px;font-family:微软雅黑;margin-top:0px;margin-left:10px;">柏运物流</p>
+	</div>
+<Volist name="new" id="b">
+<div>
+	<p style="margin:0px;width:100%;background:#ddd;height:60px;line-height:60px;font-family:微软雅黑;font-weight:bold;text-align:center;"><{$b.title}></p>
+	<p style="margin:0px;width:100%;background:#eee;line-height:50px;font-family:微软雅黑;text-indent:50px;"><{$b.content}></p>
+	<p style="margin:0px;width:100%;text-align:center;height:30px;background:#ddd;height:30px;line-height:30px;font-family:微软雅黑;">柏运网   <{$b.createtime}></p>
+</div>
+</Volist>
+<div style="margin-top:0px;width:100%;height:100px;background-color:#222222;">
+	<center>
+	<ul class="bottom_bar">
+		<li>法律声明</li> |
+		<li>网站地图</li> |
+		<li>人才招聘</li> |
+		<li>意见反馈</li> |
+		<a href=""><li>开发者</li></a>
+	</ul>
+	</center>
+	<center><p style="color:#aaa;font-family:微软雅黑;margin-top:0px;">Copyright©2015 柏运物流. All Rights Reserved.</p></center>
+</div>
+</body>
+<style>
+	.top_bar{
+		color:#fff;
+		float: right;
+		margin-top: 0px;
+		margin-right:100px;
+		list-style: none;
+		height: 70px;
+		line-height: 70px;
+		display: inline-block;
+	}
+	.top_bar li{
+		color:#fff;
+		font-family:微软雅黑;
+		padding-left: 10px;
+		padding-right:10px;
+		display: inline-block;
+	}
+	.top_bar li:hover{
+		text-decoration: underline; 
+	}
+	.search_bar{
+		color:#fff;
+		float: left;
+		margin-top: 0px;
+		margin-right:0px;
+		list-style: none;
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+	}
+	.search_bar li{
+		color:#fff;
+		font-family:微软雅黑;
+		padding-left: 0px;
+		padding-right:0px;
+		display: inline-block;
+	}
+	.bottom_bar{
+		color:#fff;
+		margin-top: 0px;
+		list-style: none;
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+	}
+	.bottom_bar li{
+		color:#fff;
+		margin-top:20px;
+		font-family: 微软雅黑;
+		padding-left: 0px;
+		padding-right:0px;
+		display: inline-block;
+	}
+</style>
+<script type="text/javascript">
+	Open_logform = function(){
+		document.all['logdiv'].style.display = "block";
+		document.all['logdiv'].style.top=150;
+	}
+	Close_logform = function(){
+		document.all['logdiv'].style.display="none";
+	}
+	Open_registerform = function(){
+		document.all['registerdiv'].style.display = "block";
+		document.all['registerdiv'].style.top=150;
+	}
+	Close_registerform = function(){
+		document.all['registerdiv'].style.display = "none";
+	}
+</script>
+</html>

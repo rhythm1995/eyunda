@@ -1,0 +1,401 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Title -->
+    <title>E运达管理系统</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="E运达管理系统" />
+    <meta name="keywords" content="admin" />
+    <meta name="author" content="Nodex" />
+
+    <!-- Styles -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link href="__ROOT__/Public/assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/>
+    <link href="__ROOT__/Public/assets/plugins/uniform/css/uniform.default.min.css" rel="stylesheet"/>
+    <link href="__ROOT__/Public/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/line-icons/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/offcanvasmenueffects/css/menu_cornerbox.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/waves/waves.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/switchery/switchery.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/3d-bold-navigation/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/slidepushmenus/css/component.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/weather-icons-master/css/weather-icons.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/metrojs/MetroJs.min.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/plugins/toastr/toastr.min.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Theme Styles -->
+    <link href="__ROOT__/Public/assets/css/modern.css" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/css/themes/white.css" class="theme-color" rel="stylesheet" type="text/css"/>
+    <link href="__ROOT__/Public/assets/css/custom.css" rel="stylesheet" type="text/css"/>
+
+    <script src="__ROOT__/Public/assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
+    <script src="__ROOT__/Public/assets/plugins/offcanvasmenueffects/js/snap.svg-min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="page-header-fixed">
+<div class="menu-wrap">
+    <button class="close-button" id="close-button">Close Menu</button>
+</div>
+<form class="search-form" action="#" method="GET">
+    <div class="input-group">
+        <input type="text" name="search" class="form-control search-input" placeholder="Search...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default close-search waves-effect waves-button waves-classic" type="button"><i class="fa fa-times"></i></button>
+                </span>
+    </div><!-- Input Group -->
+</form><!-- Search Form -->
+<main class="page-content content-wrap">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="sidebar-pusher">
+                <a href="javascript:void(0);" class="waves-effect waves-button waves-classic push-sidebar">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="logo-box">
+                <a href="index.html" class="logo-text"><span>E运达</span></a>
+            </div><!-- Logo Box -->
+            <div class="topmenu-outer">
+                <div class="top-menu">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect waves-button waves-classic sidebar-toggle"><i class="fa fa-bars"></i></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect waves-button waves-classic toggle-fullscreen"><i class="fa fa-expand"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
+                                <i class="fa fa-cogs"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-md dropdown-list theme-settings" role="menu">
+                                <li class="li-group">
+                                    <ul class="list-unstyled">
+                                        <li class="no-link" role="presentation">
+                                            固定表头
+                                            <div class="ios-switch pull-right switch-md">
+                                                <input type="checkbox" class="js-switch pull-right fixed-header-check" checked>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="li-group">
+                                    <ul class="list-unstyled">
+                                        <li class="no-link" role="presentation">
+                                            固定侧边栏
+                                            <div class="ios-switch pull-right switch-md">
+                                                <input type="checkbox" class="js-switch pull-right fixed-sidebar-check">
+                                            </div>
+                                        </li>
+                                        <li class="no-link" role="presentation">
+                                            顶部菜单栏
+                                            <div class="ios-switch pull-right switch-md">
+                                                <input type="checkbox" class="js-switch pull-right horizontal-bar-check">
+                                            </div>
+                                        </li>
+                                        <li class="no-link" role="presentation">
+                                            省略菜单名
+                                            <div class="ios-switch pull-right switch-md">
+                                                <input type="checkbox" class="js-switch pull-right toggle-sidebar-check">
+                                            </div>
+                                        </li>
+                                        <li class="no-link" role="presentation">
+                                            紧凑布局
+                                            <div class="ios-switch pull-right switch-md">
+                                                <input type="checkbox" class="js-switch pull-right compact-menu-check">
+                                            </div>
+                                        </li>
+                                        <li class="no-link" role="presentation">
+                                            盘旋布局
+                                            <div class="ios-switch pull-right switch-md">
+                                                <input type="checkbox" class="js-switch pull-right hover-menu-check">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="li-group">
+                                    <ul class="list-unstyled">
+                                        <li class="no-link" role="presentation">
+                                            盒状布局
+                                            <div class="ios-switch pull-right switch-md">
+                                                <input type="checkbox" class="js-switch pull-right boxed-layout-check">
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="li-group">
+                                    <ul class="list-unstyled">
+                                        <li class="no-link" role="presentation">
+                                            选择主题颜色
+                                            <div class="color-switcher">
+                                                <a class="colorbox color-blue" href="?theme=blue" title="Blue Theme" data-css="blue"></a>
+                                                <a class="colorbox color-green" href="?theme=green" title="Green Theme" data-css="green"></a>
+                                                <a class="colorbox color-red" href="?theme=red" title="Red Theme" data-css="red"></a>
+                                                <a class="colorbox color-white" href="?theme=white" title="White Theme" data-css="white"></a>
+                                                <a class="colorbox color-purple" href="?theme=purple" title="purple Theme" data-css="purple"></a>
+                                                <a class="colorbox color-dark" href="?theme=dark" title="Dark Theme" data-css="dark"></a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="no-link"><button class="btn btn-default reset-options">重置样式按钮</button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle waves-effect waves-button waves-classic" data-toggle="dropdown">
+                                <img class="img-circle avatar" src="__ROOT__/Public/assets/images/avatar1.png" width="40" height="40" alt="">
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="__ROOT__/admin.php/Log/AdminLogout" class="log-out waves-effect waves-button waves-classic">
+                                <span><i class="fa fa-sign-out m-r-xs"></i>退出系统</span>
+                            </a>
+                        </li>
+
+                    </ul><!-- Nav -->
+                </div><!-- Top Menu -->
+            </div>
+        </div>
+    </div><!-- Navbar -->
+    <div class="page-sidebar sidebar">
+        <div class="page-sidebar-inner slimscroll">
+            <div class="sidebar-header">
+                <div class="sidebar-profile">
+                    <a href="javascript:void(0);" id="profile-menu-link">
+                        <div class="sidebar-profile-image">
+                            <img src="__ROOT__/Public/assets/images/avatar1.png" class="img-circle img-responsive" alt="">
+                        </div>
+                        <?php if(is_array($admin)): $i = 0; $__LIST__ = $admin;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><div class="sidebar-profile-details">
+                                    <span><?php echo ($a["name"]); ?></span>
+                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </a>
+                </div>
+            </div>
+           <ul class="menu accordion-menu">
+                        <li ><a href="__ROOT__/admin.php/Main/index.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-home"></span><p>首页</p></a></li>
+                        <li><a href="__ROOT__/admin.php/User/index.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>用户管理</p></a></li>
+                        <li><a href="__ROOT__/admin.php/Car/index.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-scale"></span><p>车辆管理</p></a></li>
+                        <li class="active"><a href="__ROOT__/admin.php/Yundan/index.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-shopping-cart"></span><p>运单管理</p></a></li>
+                        <li><a href="__ROOT__/admin.php/News/index.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-th"></span><p>咨询发布</p></a></li>
+                        <li><a href="__ROOT__/admin.php/Shenhe/index.html" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-edit"></span><p>车辆审核</p></span></a></li>
+            </ul>
+        </div><!-- Page Sidebar Inner -->
+    </div><!-- Page Sidebar -->
+
+            <div class="page-inner">
+                <div class="page-title">
+                	<?php if(is_array($good)): $i = 0; $__LIST__ = $good;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$g): $mod = ($i % 2 );++$i;?><h3><a href="__ROOT__/admin.php/Yundan/index.html">运单管理</a>/<?php echo ($g["id"]); ?></h3><?php endforeach; endif; else: echo "" ;endif; ?>
+                </div>
+                <div id="main-wrapper">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-white">
+                            		<?php if(is_array($good)): $i = 0; $__LIST__ = $good;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$g): $mod = ($i % 2 );++$i;?><div class="panel-body" style="padding: 10px">
+                                        <h4>货物信息</h4>
+
+
+                                        <div class="col-md-3" >
+                                            <div class="controls">
+                                                <label for="showEasing" style="float: left">物品名:</label>
+                                                <label for="showEasing" ><?php echo ($g["goodname"]); ?></label>
+
+                                                <label for="showEasing" style="float: left">需要数量:</label>
+                                                <label for="showEasing"><?php echo ($g["goodnumber"]); ?></label>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="col-md-3" >
+                                            <div class="controls">
+                                                <label for="hideEasing" style="float: left">货物种类:</label>
+                                                <label for="hideEasing"><?php echo ($g["goodtype"]); ?></label>
+
+                                                <label for="hideEasing" style="float: left">货物体积:</label>
+                                                <label for="hideEasing"><?php echo ($g["goodlength"]); ?></label>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-md-3" >
+                                            <div class="controls">
+                                                <label for="showMethod" style="float: left">需要车型:</label>
+                                                <label for="showMethod"><?php echo ($g["needcar"]); ?></label>
+
+                                                <label for="showMethod" style="float: left">货物重量:</label>
+                                                <label for="showMethod"><?php echo ($g["goodweight"]); ?></label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3" >
+                                            <div class="controls">
+                                                <label for="showMethod" style="float: left"><a href="__ROOT__/admin.php/Yundan/Del/id/<?php echo ($g["id"]); ?>.html">删除运单信息</a></label>
+                                                <label for="showMethod"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="panel panel-white">
+                                    <div class="panel-body">
+                                        <h4>配送信息</h4>
+                                            <div class="col-md-3">
+                                                <div class="controls">
+                                                    <label for="showEasing" style="float: left">始发地:</label>
+                                                    <label id="fromp" for="showEasing"><?php echo ($g["fromprovince"]); ?></label>
+
+                                                    <label for="showEasing" style="float: left">始发城市:</label>
+                                                    <label id='fromc'  for="showEasing"><?php echo ($g["fromcity"]); ?></label>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-3">
+                                                <div class="controls">
+                                                    <label for="showEasing" style="float: left">目的地:</label>
+                                                    <label id="top" for="showEasing"><?php echo ($g["toprovince"]); ?></label>
+
+                                                    <label for="hideEasing" style="float: left">目的城市:</label>
+                                                    <label id='toc' for="hideEasing"><?php echo ($g["tocity"]); ?></label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3">
+                                                <div class="controls">
+                                                    <label for="showEasing" style="float: left">发货日期:</label>
+                                                    <label for="showEasing"><?php echo ($g["timeon"]); ?></label>
+
+                                                    <label for="hideEasing" style="float: left">到货日期:</label>
+                                                    <label for="hideEasing"><?php echo ($g["timeoff"]); ?></label>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                                <?php if(is_array($twouser)): $i = 0; $__LIST__ = $twouser;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$u): $mod = ($i % 2 );++$i;?><div class="panel panel-white">
+                                   <div class="panel-body">
+                                       <h4>用户信息</h4>
+                                       <div class="col-md-3">
+                                           <div class="controls">
+                                               <label for="showEasing" style="float: left">发货人:</label>
+                                               <label for="showEasing"><a href="__ROOT__/admin.php/User/Detil/id/<?php echo ($u["fahuoid"]); ?>.html"><?php echo ($u["fahuoren"]); ?></a></label>
+
+                                               <label for="showEasing" style="float: left">发货人电话:</label>
+                                               <label for="showEasing"><?php echo ($u["fahuophone"]); ?></label>
+                                           </div>
+                                       </div>
+
+                                       <div class="col-md-3">
+                                           <div class="controls">
+                                               <label for="showEasing" style="float: left">运货人:</label>
+                                               <label for="showEasing"><a href="__ROOT__/admin.php/User/Detil/id/<?php echo ($u["yunhuoid"]); ?>.html"><?php echo ($u["yunhuoren"]); ?></a></label>
+
+                                               <label for="hideEasing" style="float: left">运货人电话:</label>
+                                               <label for="hideEasing"><?php echo ($u["yunhuophone"]); ?></label>
+                                           </div>
+                                       </div>
+                                   </div>
+                                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                                <?php if(is_array($wuliu)): $i = 0; $__LIST__ = $wuliu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$w): $mod = ($i % 2 );++$i;?><div class="panel panel-white">
+                                <div class="panel-body">
+                                    <table class="table">
+                                        <h4>物流详情</h4>
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>日期</th>
+                                            <th>星期</th>
+                                            <th>时间</th>
+                                            <th>到达地</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row"><?php echo ($w["xuhao"]); ?></th>
+                                            <td><?php echo ($w["time"]); ?></td>
+                                            <td><?php echo ($w["xingqi"]); ?></td>
+                                            <td><?php echo ($w["hour"]); ?></td>
+                                            <td><?php echo ($w["address"]); ?></td>
+                                        </tr>
+                                       
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                            <div class="panel panel-white">
+                                <div class="panel-body">
+                                    <h4>地图信息</h4>
+                                            <div id="allmap" style="width: 800px;height: 600px">
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+
+
+
+        <!-- Javascripts -->
+        <script src="__ROOT__/Public/assets/plugins/jquery/jquery-2.1.3.min.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/pace-master/pace.min.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/switchery/switchery.min.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/uniform/jquery.uniform.min.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/offcanvasmenueffects/js/classie.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/offcanvasmenueffects/js/main.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/waves/waves.min.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/3d-bold-navigation/js/main.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/jquery-mockjax-master/jquery.mockjax.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/moment/moment.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/datatables/js/jquery.datatables.min.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/x-editable/bootstrap3-editable/js/bootstrap-editable.js"></script>
+        <script src="__ROOT__/Public/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="__ROOT__/Public/assets/js/modern.min.js"></script>
+        <script src="__ROOT__/Public/assets/js/pages/table-data.js"></script>
+
+
+    </body>
+</html>
+
+
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Cl8zLjik7tYqADmYEeeIICKu"></script>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var start = document.getElementById('fromp').innerText+document.getElementById('fromc').innerText;
+    //alert(start);
+    var end = document.getElementById('top').innerText+document.getElementById('toc').innerText;
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+    //三种驾车策略：最少时间，最短距离，避开高速
+    var routePolicy = [BMAP_DRIVING_POLICY_LEAST_TIME,BMAP_DRIVING_POLICY_LEAST_DISTANCE,BMAP_DRIVING_POLICY_AVOID_HIGHWAYS];
+    map.clearOverlays();
+    search(start,end,routePolicy[0]);
+    function search(start,end,route){
+        var driving = new BMap.DrivingRoute(map, {renderOptions:{map: map, autoViewport: true},policy: route});
+        driving.search(start,end);
+    }
+</script>

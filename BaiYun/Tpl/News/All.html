@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>柏运网新闻中心</title>
+</head>
+<body style="margin:0px;background:#d3d3d3;">
+	<div style="margin:0px;padding:0px;background:#222222;background-size:0.3% 100%;height:70px;border-bottom:solid 2px #aaa;z-index:10;">
+	<img src="__ROOT__/baiyun/Public/img/logo/baiyun.png" style="margin-left:100px;height:70px;width:70px;float:left;">
+	<p style="color:#fff;float:left;height:70px;line-height:70px;font-size:30px;font-family:微软雅黑;margin-top:0px;margin-left:10px;">柏运物流</p>
+	<ul class="top_bar">
+	<div style="width:200px;float:right;height:70px;line-height:70px;margin-right:0px;">
+		<div style="width:200px;height:35px;line-height:35px;font-family: 微软雅黑;color:#fff;" onClick="Open_logform()">登陆</div>
+		<div style="width:200px;height:35px;line-height:35px;font-family: 微软雅黑;color:#fff;" onClick="Open_registerform()">注册</div>
+	</div>
+	<div id="logdiv"  style="width:40%;height:250px;background:#444444;z-index:10;position:fixed;top:150px;left:30%;border:solid 3px #222222;display:none;border-top:none;">
+		<div style="width:100%;height:30px;background:#222222;">
+		<p style="margin:0px;height:30px;line-height:30p;font-family:微软雅黑;color:#ddd;padding-left:10px;float:left;">登陆</p>
+		<p style="float:right;color:#ffffff;font-family:微软雅黑;margin:0px;padding-right:10px;background:#ddd;width:30px;height:30px;line-height:30px;" onclick="Close_logform()">X</p>
+		</div>
+		<center>
+		<form style="width:80%;padding-top:20px;">
+			<input style="width:100%;height:30px;margin-top:10px;" placeholder="用户名" type="text"><br>
+			<input style="width:100%;height:30px;margin-top:10px;" placeholder="密码" type="password"><br>
+			<input style="width:100%;height:30px;margin-top:10px;" type="button" value="登陆">
+		</form>
+		</center>
+	</div>
+	<div id="registerdiv"  style="width:40%;height:400px;background:#444444;z-index:10;position:fixed;top:150px;left:30%;border:solid 3px #222222;display:none;border-top:none;">
+		<div style="width:100%;height:30px;background:#222222;">
+		<p style="margin:0px;height:30px;line-height:30p;font-family:微软雅黑;color:#ddd;padding-left:10px;float:left;">注册</p>
+		<p style="float:right;color:#ffffff;font-family:微软雅黑;margin:0px;padding-right:10px;background:#ddd;width:30px;height:30px;line-height:30px;" onclick="Close_registerform()">X
+		</p>
+		</div>
+		<center>
+		<form style="width:80%;padding-top:20px;">
+			<input style="width:100%;height:30px;margin-top:10px;" placeholder="用户名" type="text"><br>
+			<input style="width:100%;height:30px;margin-top:10px;" placeholder="密码" type="password"><br>
+			<input style="width:100%;height:30px;margin-top:10px;" placeholder="验证密码" type="password"><br>
+			<input style="width:100%;height:30px;margin-top:10px;" placeholder="手机号码" type="text"><br>
+			<input style="width:40%;height:30px;margin-top:10px;"  type="button" value="获取验证码">
+			<input style="width:40%;height:30px;margin-top:10px;" placeholder="验证码" type="text"><br>
+			<input style="width:100%;height:30px;margin-top:10px;" type="button" value="注册">
+			<p>点击注册，即表示你同意我们的<a href="#">条款</a>，且已阅读过我们的<a href="#">《数据使用政策》</a>，包括<a href="#">《Cookie 使用政策》。</a></p>
+		</form>
+		</center>
+	</div>
+	</div>
+	<div style="width:100%;height:250px;background:#d3d3d3;display:inline-block;">
+		<Volist name="bignew" id="b">
+		<a href="__ROOT__/baiyun/index.php/News/One/id/<{$b.id}>">
+			<h1 style="margin:0px;margin-left:4%;font-family:微软雅黑;width:20%;height:250px;background:#aaa;float:left;color:#444444;text-align:center;"><{$b.title}></h1>
+		</a>
+		</Volist>
+	</div>
+	<Volist name = "news" id="a">
+	<a href="__ROOT__/baiyun/index.php/News/One/id/<{$a.id}>">
+	<div class="item_news" style="width:100%;height:50px;background:#bbb;margin-top:2px;">
+		<p style="margin:0px;margin-left:50px;float:left;height:50px;line-height:50px;font-family:微软雅黑;color:#222222;"><{$a.title}></p>
+		<p style="margin:0px;margin-right:50px;float:right;height:50px;line-height:50px;font-family:微软雅黑;color:#444444;">>>></p>
+		<p style="margin:0px;margin-right:50px;float:right;height:50px;line-height:50px;font-family:微软雅黑;color:#444444;"><{$a.createtime}></p>
+	</div>
+	</a>
+	</Volist>
+	<div style="margin-top:0px;width:100%;height:100px;background-color:#222222;">
+	<center>
+	<ul class="bottom_bar">
+		<li>法律声明</li> |
+		<li>网站地图</li> |
+		<li>人才招聘</li> |
+		<li>意见反馈</li> |
+		<a href=""><li>开发者</li></a>
+	</ul>
+	</center>
+	<center><p style="color:#aaa;font-family:微软雅黑;margin-top:0px;">Copyright©2015 柏运物流. All Rights Reserved.</p></center>
+</div>
+</body>
+<style type="text/css">
+	.item_news:hover{
+		background-color:#999999;
+	}
+</style>
+<style>
+	.top_bar{
+		color:#fff;
+		float: right;
+		margin-top: 0px;
+		margin-right:100px;
+		list-style: none;
+		height: 70px;
+		line-height: 70px;
+		display: inline-block;
+	}
+	.top_bar li{
+		color:#fff;
+		font-family:微软雅黑;
+		padding-left: 10px;
+		padding-right:10px;
+		display: inline-block;
+	}
+	.top_bar li:hover{
+		text-decoration: underline; 
+	}
+	.search_bar{
+		color:#fff;
+		float: left;
+		margin-top: 0px;
+		margin-right:0px;
+		list-style: none;
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+	}
+	.search_bar li{
+		color:#fff;
+		font-family:微软雅黑;
+		padding-left: 0px;
+		padding-right:0px;
+		display: inline-block;
+	}
+	.bottom_bar{
+		color:#fff;
+		margin-top: 0px;
+		list-style: none;
+		height: 30px;
+		line-height: 30px;
+		display: inline-block;
+	}
+	.bottom_bar li{
+		color:#fff;
+		margin-top:20px;
+		font-family: 微软雅黑;
+		padding-left: 0px;
+		padding-right:0px;
+		display: inline-block;
+	}
+</style>
+<script type="text/javascript">
+	Open_logform = function(){
+		document.all['logdiv'].style.display = "block";
+		document.all['logdiv'].style.top=150;
+	}
+	Close_logform = function(){
+		document.all['logdiv'].style.display="none";
+	}
+	Open_registerform = function(){
+		document.all['registerdiv'].style.display = "block";
+		document.all['registerdiv'].style.top=150;
+	}
+	Close_registerform = function(){
+		document.all['registerdiv'].style.display = "none";
+	}
+</script>
+</html>
