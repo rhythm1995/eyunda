@@ -1,0 +1,206 @@
+body{
+    margin:0px;
+}
+
+.top{
+    position:fixed;
+    z-index:100;
+    width:100%;
+    height:30px;
+    background:#f0f0f0;
+    box-shadow:0px 0px 1px 2px #555555;
+}
+
+#top_ul{
+    float:right;
+    margin-top:0px;
+    margin-right:10%;
+    display:inline-block;
+    height:30px;
+    line-height:30px;
+}
+
+#top_text{
+    float: right;
+    margin-top: 5px;
+}
+
+#gerenzhongxin{
+    display:inline-block;
+    height:30px;
+    line-height:30px;
+    font-family:微软雅黑;
+    padding-right:10px;
+}
+
+#xiaoxi{
+    display:inline-block;
+    height:30px;
+    line-height:30px;
+    font-family:微软雅黑;
+}
+
+#xiaoxishu{
+    height:18px;
+    margin-top:6px;
+    background:rgb(231,0,80);
+    border-radius:4px;
+    float:right;
+    margin-left:5px;
+    color:#fff;
+    line-height:18px;
+    font-family:黑体;
+    padding-left:2px;
+    padding-right:2px
+}
+
+#username{
+    height:30px;
+    line-height:30px;
+    font-family:微软雅黑;
+    float:right;
+    margin-top:0px;
+}
+
+#phonenumber{
+    height:18px;
+    margin-top:6px;
+    background:rgb(231,0,80);
+    border-radius:4px;
+    margin-left:5px;
+    color:#fff;
+    line-height:18px;
+    font-family:黑体;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+#chezhurenzhen{
+    height:18px;
+    margin-top:6px;
+    background:rgb(0,167,60);
+    border-radius:4px;
+    margin-left:5px;
+    color:#fff;
+    line-height:18px;
+    font-family:黑体;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+#qiyerenzhen{
+    height:18px;
+    margin-top:6px;
+    background:rgb(0,167,60);
+    border-radius:4px;
+    margin-left:5px;
+    color:#fff;
+    line-height:18px;
+    font-family:黑体;
+    padding-left:2px;
+    padding-right:2px;
+}
+
+#top_meanu{
+    width:100%;
+    background:#f5f5f5;
+    padding-top:20px;
+    box-shadow:0px 0px 1px 2px rgb(38,172,255);
+    padding-bottom:20px;
+}
+
+#top_button{
+    background:#fff;
+    width:80%;
+    height:550px;
+    margin-left:10%;
+    box-shadow:0px 2px 2px 1px #d3d3d3;
+    padding:10px;
+    padding-bottom:10px;;
+}
+
+#all_button{
+    width:20%;
+    height:510px;
+    float:left;
+}
+
+#span_text{
+    margin-left: 10px;
+}
+
+#top_background{
+    background-image:url("../images/background.png");
+    width:100%;
+    height:100px;
+    z-index:10;
+}
+
+#logo_img{
+    height:50px;
+    margin-top:40px;
+    margin-left:10%;
+}
+
+.litop{
+    display:inline-block;
+    margin-top:3%;
+    margin-right:10%;
+    height:70px;
+    line-height:70px;
+    float:right;
+}
+
+#truck_img{
+    width:80%;
+}
+
+#fahuo_button{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#allmap{
+    width:78%;
+    height: 90%;
+    float:left;
+}
+
+#bot{
+    float: left;
+    width: 100%;
+    height: 80px;
+    background-color: #1f1f1f;
+    display: inline-block;
+}
+
+#bot_inside{
+    margin-left: 30%;
+}
+
+#bot_img{
+    margin-top: 20px;
+    display: inline-block;
+}
+
+#bot_text{
+    height: 10px;
+    line-height: 40px;
+    color: white;
+    display: inline-block;
+}
+
+span{
+    color:rgb(38,172,255) ;
+}
+
+
+
+
+hr{
+    margin-top: 10px;
+}
+
+ul{
+    display: inline;
+}

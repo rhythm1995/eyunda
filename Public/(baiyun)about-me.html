@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <!-- Title -->
+        <title>柏运网</title>
+        
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Admin Dashboard Template" />
+        <meta name="keywords" content="admin,dashboard" />
+        <meta name="author" content="Steelcoders" />
+        
+        <!-- Styles -->
+        <link href="assets/css/truckstylesheet.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/button.css" rel="stylesheet" type="text/css">
+        <link href="assets/plugins/pace-master/themes/blue/pace-theme-flash.css" rel="stylesheet"/>
+        <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/fontawesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/line-icons/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/offcanvasmenueffects/css/menu_cornerbox.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/waves/waves.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/3d-bold-navigation/css/style.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/slidepushmenus/css/component.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Theme Styles -->
+        <link href="assets/css/modern.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/themes/white.css.css" class="theme-color" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/custom.css" rel="stylesheet" type="text/css"/>
+
+        <script src="assets/plugins/3d-bold-navigation/js/modernizr.js"></script>
+        <script src="assets/plugins/offcanvasmenueffects/js/snap.svg-min.js"></script>
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+    </head>
+    <body class="page-header-fixed">
+        <Volist name='loguser' id = 'l'>
+            <div class="top">
+                <ul id="top_ul">
+                    <a href=""><li id="gerenzhongxin">个人中心</li></a>
+                    <a href=""><li id="xiaoxi">消息 <p id="xiaoxishu">4</p></li></a>
+                </ul>
+                <p id="top_text"><span class="glyphicon glyphicon-user"></span><{$l.username}><i id="phonenumber"><{$l.phone}></i><i id="chezhurenzhen">车主认证</i><i id="qiyerenzhen">企业认证</i>，欢迎使用柏运物流！</p>
+            </div>
+
+            <div id="top_background">
+                <img src="../../Html2/images/logotext.png" id="logo_img">
+                <ul class="litop">
+                    <a href="index.html" class="button button-uppercase button-primary">找货</a>
+                    <a href="introduce.html" class="button button-uppercase button-primary">找车</a>
+                    <a href="consult.html" class="button button-uppercase button-primary">发货</a>
+                    <a href="cooperation.html" class="button button-uppercase button-primary">司机认证</a>
+                    <a href="" class="button button-uppercase button-primary">我的账户</a>
+                </ul>
+            </div>
+
+        </Volist>
+
+
+
+
+        <div id="top_meanu">
+            <div id="top_button">
+                <a href="#">个人中心</a>>用户资料
+                <hr>
+                <div class="page-sidebar sidebar" id="person_menu">
+                    <div class="page-sidebar-inner slimscroll">
+                        <div class="sidebar-header">
+                            <div class="sidebar-profile">
+                                <a href="javascript:void(0);" id="profile-menu-link">
+                                    <div class="sidebar-profile-image">
+                                        <img src="assets/images/avatar1.png" class="img-circle img-responsive" alt="">
+                                    </div>
+                                    <div class="sidebar-profile-details">
+                                        <span><small>BugZhang</small></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <ul class="menu accordion-menu">
+
+                            <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-list"></span><p>运单中心</p><span class="arrow"></span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="table-static.html">&nbsp;&nbsp;&nbsp;等待处理的订单</a></li>
+                                    <li><a href="table-responsive.html">&nbsp;&nbsp;&nbsp;正在处理的订单</a></li>
+                                    <li><a href="table-data.html">&nbsp;&nbsp;&nbsp;&nbsp;已完成的订单</a></li>
+                                    <li><a href="table-data.html">&nbsp;&nbsp;&nbsp;发布货源</a></li>
+                                </ul>
+                            </li>
+                            <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-scale"></span><p>车辆中心</p><span class="arrow"></span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="table-static.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;车辆认证</a></li>
+                                    <li><a href="table-data.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我的车辆</a></li>
+                                </ul>
+                            </li>
+                            <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon glyphicon glyphicon-user"></span><p>个人中心</p><span class="arrow"></span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="table-static.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用户资料</a></li>
+                                    <li><a href="table-responsive.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数据图表</a></li>
+                                    <li><a href="table-data.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;消息中心</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-1">
+                </div>
+
+                <div class="col-md-6">
+                    <div class="panel panel-white">
+                        <div class="panel-heading clearfix">
+                            <h4 class="panel-title">用户资料</h4>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleInputName">用户名</label>
+                                    <input type="text" class="form-control" id="exampleInputName" placeholder="点击输入用户名">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputNumber">手机号码</label>
+                                    <input type="text" class="form-control" id="exampleInputNumber" placeholder="点击输入您的手机号码">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">密码</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="点击输入您的密码">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword2">确认密码</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="点击确认您的密码">
+                                </div>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">我已经阅读并同意《<a href="">柏运物流平台服务协议</a>》
+                                    </label>
+                                </div>
+
+                                <div>
+                                    <button type="submit" class="btn btn-info">点击获取验证码</button>
+                                    <div style="float: right;margin-right: 100px">
+                                        <input type="text" class="form-control" id="exampleInputModify" placeholder="点击输入验证码">
+                                    </div>
+                                </div>
+
+                                <br>
+                                <button type="submit" class="btn btn-danger">提交资料</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="bot">
+                <div id="bot_inside">
+                    <img id="bot_img" src="../../Html2/images/logo_bot.png">
+                    <p id="bot_text">Copyright@2015&nbsp;&nbsp;上海柏运物流版权所有&nbsp;&nbsp;&nbsp; powered by Nodex</p>
+
+                </div>
+            </div>
+
+	
+
+            <script src="assets/plugins/jquery/jquery-2.1.3.min.js"></script>
+            <script src="assets/plugins/jquery-ui/jquery-ui.min.js"></script>
+            <script src="assets/plugins/pace-master/pace.min.js"></script>
+            <script src="assets/plugins/jquery-blockui/jquery.blockui.js"></script>
+            <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+            <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+            <script src="assets/plugins/switchery/switchery.min.js"></script>
+            <script src="assets/plugins/uniform/jquery.uniform.min.js"></script>
+            <script src="assets/plugins/offcanvasmenueffects/js/classie.js"></script>
+            <script src="assets/plugins/offcanvasmenueffects/js/main.js"></script>
+            <script src="assets/plugins/waves/waves.min.js"></script>
+            <script src="assets/plugins/3d-bold-navigation/js/main.js"></script>
+            <script src="assets/js/modern.min.js"></script>
+
+
+    </body>
+</html>
