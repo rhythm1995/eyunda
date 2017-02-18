@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>柏运网</title>
+    <meta charset="utf-8">
+    <script src="js/jquery-2.1.4.js"></script>
+	<link rel="stylesheet" href="css/button.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/authenticationstylesheet.css">
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<Volist name='loguser' id = 'l'>
+	<div class="top">
+		<ul id="top_ul">
+			<a href=""><li id="gerenzhongxin">个人中心</li></a>
+			<a href=""><li id="xiaoxi">消息 <p id="xiaoxishu">4</p></li></a>
+		</ul>
+		<p id="top_text"><span class="glyphicon glyphicon-user"></span><{$l.username}><i id="phonenumber"><{$l.phone}></i><i id="chezhurenzhen">车主认证</i><i id="qiyerenzhen">企业认证</i>，欢迎使用柏运物流！</p>
+	</div>
+
+	<div id="top_background">
+		<img src="images/logotext.png" id="logo_img">
+		<ul class="litop">
+			<a href="index.html" class="button button-uppercase button-primary">找货</a>
+			<a href="introduce.html" class="button button-uppercase button-primary">找车</a>
+			<a href="consult.html" class="button button-uppercase button-primary">发货</a>
+			<a href="cooperation.html" class="button button-uppercase button-primary">司机认证</a>
+			<a href="" class="button button-uppercase button-primary">我的账户</a>
+		</ul>
+	</div>
+	</Volist>
+
+	<div id="top_meanu">
+		<div id="top_button2">
+			<a href="searchtruck.html">司机认证</a>
+			<hr>
+			<h4 style="margin-left: 40px">尊敬的百运客户，您的申请已提交成功，我们将在3-5个工作日内完成审核并已短信告知，祝您生活愉快！</h4>
+		</div>
+	</div>
+
+
+
+	<div id="bot">
+	    <div id="bot_inside">
+			<img id="bot_img" src="images/logo_bot.png">
+			<p id="bot_text">Copyright@2015&nbsp;&nbsp;上海柏运物流版权所有&nbsp;&nbsp;&nbsp; powered by Nodex</p>
+		</div>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	var file = function(files){
+		files.click();
+	}
+</script>

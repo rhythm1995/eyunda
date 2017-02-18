@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>柏运网</title>
+    <meta charset="utf-8">
+    <script src="js/jquery-2.1.4.js"></script>
+	<link rel="stylesheet" href="css/button.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/searchtruckstylesheet.css">
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<Volist name='loguser' id = 'l'>
+	<div class="top">
+		<ul id="top_ul">
+			<a href=""><li id="gerenzhongxin">个人中心</li></a>
+			<a href=""><li id="xiaoxi">消息 <p id="xiaoxishu">4</p></li></a>
+		</ul>
+		<p id="top_text"><span class="glyphicon glyphicon-user"></span><{$l.username}><i id="phonenumber"><{$l.phone}></i><i id="chezhurenzhen">车主认证</i><i id="qiyerenzhen">企业认证</i>，欢迎使用柏运物流！</p>
+	</div>
+
+	<div id="top_background">
+		<img src="images/logotext.png" id="logo_img">
+		<ul class="litop">
+			<a href="index.html" class="button button-uppercase button-primary">找货</a>
+			<a href="introduce.html" class="button button-uppercase button-primary">找车</a>
+			<a href="consult.html" class="button button-uppercase button-primary">发货</a>
+			<a href="cooperation.html" class="button button-uppercase button-primary">司机认证</a>
+			<a href="" class="button button-uppercase button-primary">我的账户</a>
+		</ul>
+	</div>
+
+	</Volist>
+		<div id="top_meanu">
+			<div id="top_button">
+				<a href="searchtruck.html">找车</a>
+				<hr>
+				<div id="search">
+					<div id="shifadi">
+						<form class="form-inline">
+							<div class="form-group">
+								<label for="exampleInputName2">始发地:</label>
+								<input type="text" class="form-control" id="exampleInputName2" placeholder="北京市东城区">
+							</div>
+							<img src="images/find_img.png">
+							<div class="form-group">
+								<label for="exampleInputEmail2">目的地:</label>
+								<input type="email" class="form-control" id="exampleInputEmail2" placeholder="北京市东城区">
+							</div>
+							<a href="" class="button button-primary button-pill button-small" id="search_button">查 询</a>
+						</form>
+					</div>
+					<hr>
+					<div id="all_3ul">
+						<div class="all_ul">
+							<ul>车辆类型:</ul>
+							<ul>不限</ul>
+							<ul>平板车</ul>
+							<ul>工程车</ul>
+							<ul>罐车</ul>
+							<ul>集装箱运输车</ul>
+							<ul>冷藏车</ul>
+							<ul>面包车</ul>
+							<ul>爬梯车</ul>
+							<ul>商品车运输车</ul>
+							<ul>厢式货车</ul>
+							<ul>自卸车</ul>
+							<ul>其他车</ul>
+						</div>
+						<hr>
+						<div class="all_ul">
+							<ul>车辆类型：</ul>
+							<ul>不限</ul>
+							<ul>2.8米</ul>
+							<ul>3.8米</ul>
+							<ul>4.2米</ul>
+							<ul>5.1米</ul>
+							<ul>6.1米</ul>
+							<ul>7.2米</ul>
+							<ul>8.1米</ul>
+							<ul>9.6米</ul>
+							<ul>12.5米</ul>
+							<ul>13米</ul>
+							<ul>16米</ul>
+							<ul>17.5米</ul>
+							<ul>6米以下</ul>
+							<ul>6-9米</ul>
+							<ul>9-12米</ul>
+							<ul>12-15米</ul>
+							<ul>15-18米</ul>
+							<ul>18-21米</ul>
+							<ul>21米以上</ul>
+						</div>
+						<hr>
+						<div class="all_ul">
+							<ul>载重</ul>
+							<ul>不限</ul>
+							<ul>2吨</ul>
+							<ul>2-4吨</ul>
+							<ul>4-8吨</ul>
+							<ul>8-12吨</ul>
+							<ul>12-16吨</ul>
+							<ul>16-20吨</ul>
+							<ul>20-25吨</ul>
+							<ul>25-30吨</ul>
+							<ul>30吨以上</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="fenjie">
+			</div>
+
+			<div id="search_final">
+				<div id="search_menu">
+					<div class="col-md-1"></div>
+					<div class="col-md-2">车辆信息</div>
+					<div class="col-md-3"></div>
+					<div class="col-md-3">位置信息</div>
+					<div class="col-md-1"></div>
+					<div class="col-md-2">操作</div>
+				</div>
+
+				<div class="one_final">
+					<br>
+					<div class="col-md-1"></div>
+					<div class="col-md-2">湘A4515**</div>
+					<div class="col-md-3">平板车 | 8米 | 12吨</div>
+					<div class="col-md-3">湖南省长沙市岳麓区中南大学</div>
+					<div class="col-md-1"></div>
+					<div class="col-md-2">给他发货</div>
+
+					<div class="col-md-1"></div>
+					<div class="col-md-2">15675884010 张师傅</div>
+					<div class="col-md-3">湖南省长沙市 —— 全国</div>
+					<div class="col-md-6">2015-7-21 03:21</div>
+				</div>
+
+
+
+				<div class="one_final">
+					<br>
+					<div class="col-md-1"></div>
+					<div class="col-md-2">湘A4515**</div>
+					<div class="col-md-3">平板车 | 8米 | 12吨</div>
+					<div class="col-md-3">湖南省长沙市岳麓区中南大学</div>
+					<div class="col-md-1"></div>
+					<div class="col-md-2">给他发货</div>
+
+					<div class="col-md-1"></div>
+					<div class="col-md-2">15675884010 张师傅</div>
+					<div class="col-md-3">湖南省长沙市 —— 全国</div>
+					<div class="col-md-6">2015-7-21 03:21</div>
+
+				</div>
+
+
+				<div class="one_final">
+					<br>
+					<div class="col-md-1"></div>
+					<div class="col-md-2">湘A4515**</div>
+					<div class="col-md-3">平板车 | 8米 | 12吨</div>
+					<div class="col-md-3">湖南省长沙市岳麓区中南大学</div>
+					<div class="col-md-1"></div>
+					<div class="col-md-2">给他发货</div>
+
+					<div class="col-md-1"></div>
+					<div class="col-md-2">15675884010 张师傅</div>
+					<div class="col-md-3">湖南省长沙市 —— 全国</div>
+					<div class="col-md-6">2015-7-21 03:21</div>
+				</div>
+			</div>
+		</div>
+
+	<div id="bot">
+	    <div id="bot_inside">
+			<img id="bot_img" src="images/logo_bot.png">
+			<p id="bot_text">Copyright@2015&nbsp;&nbsp;上海柏运物流版权所有&nbsp;&nbsp;&nbsp; powered by Nodex</p>
+		</div>
+	</div>
+
+</body>

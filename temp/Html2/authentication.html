@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>柏运网</title>
+    <meta charset="utf-8">
+    <script src="js/jquery-2.1.4.js"></script>
+	<link rel="stylesheet" href="css/button.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/authenticationstylesheet.css">
+	<!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<Volist name='loguser' id = 'l'>
+	<div class="top">
+		<ul id="top_ul">
+			<a href=""><li id="gerenzhongxin">个人中心</li></a>
+			<a href=""><li id="xiaoxi">消息 <p id="xiaoxishu">4</p></li></a>
+		</ul>
+		<p id="top_text"><span class="glyphicon glyphicon-user"></span><{$l.username}><i id="phonenumber"><{$l.phone}></i><i id="chezhurenzhen">车主认证</i><i id="qiyerenzhen">企业认证</i>，欢迎使用柏运物流！</p>
+	</div>
+
+	<div id="top_background">
+		<img src="images/logotext.png" id="logo_img">
+		<ul class="litop">
+			<a href="searchgoods.html" class="button button-uppercase button-primary">找货</a>
+			<a href="searchtruck.html" class="button button-uppercase button-primary">找车</a>
+			<a href="" class="button button-uppercase button-primary">发货</a>
+			<a href="authentication.html" class="button button-uppercase button-primary">司机认证</a>
+			<a href="" class="button button-uppercase button-primary">我的账户</a>
+		</ul>
+	</div>
+	</Volist>
+
+	<div id="top_meanu">
+		<div id="top_button">
+			<a href="searchtruck.html">司机认证</a>
+			<hr>
+			<div id="search">
+				<div id="renzhen_text">
+					<h3>柏运网商用车辆进网审核</h3>
+					<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说明：
+						1、以下信息请详细如实填写。
+						2、以上所有上传证件请保证号码清晰可见。
+						3、以上所有证件提供复印件及加盖公司公章。
+						4、每车填写一张表格。
+						5、以上信息如有需更改请及时变更填写审核表。
+						6、牵引商用车一头一架为一组评分。
+						7、以下评分经人工审核后不低于85分方可入网。</p>
+					<hr>
+				</div>
+
+				<div id="dange_renzhen1">
+
+					<h4>户名:</h4>
+					<br>
+							<form class="form-inline">
+								<div class="form-group">
+								<label>单位名称</label>
+								<input type="text" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label>单位地址</label>
+									<input type="text" class="form-control" >
+								</div>
+
+								<div class="form-group">
+									<label>法人</label>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label>法人身份证号</label>
+									<input type="text" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label>法人地址</label>
+									<input type="text" class="form-control">
+								</div>
+							</form>
+
+
+							<div class="file">
+								<br>
+								<label>营业执照</label>
+								<input id="openfile" type="file"/>
+								<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+							</div>
+
+							<div class="file">
+								<br>
+								<label>组织机构代码证</label>
+									<input id="openfile" type="file"/>
+								<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+							</div>
+
+							<div class="file">
+								<br>
+								<label>税务登记证</label>
+								<input id="openfile" type="file"/>
+								<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+							</div>
+
+							<div class="file">
+								<br>
+								<label>法人身份证</label>
+								<input id="openfile" type="file"/>
+								<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+							</div>
+
+			</div>
+				<div id="dange_renzhen2">
+					<hr>
+					<h4>商用车辆进网信息:</h4>
+					<br>
+
+							<form class="form-inline">
+								<div class="form-group">
+								<label>进网车型</label>
+								<input type="text" class="form-control">
+								</div>
+
+								<div class="form-group">
+									<label>车头号</label>
+									<input type="text" class="form-control" >
+								</div>
+
+								<div class="form-group">
+									<label>车架号</label>
+									<input type="text" class="form-control">
+								</div>
+							</form>
+
+					        <div>
+								<br>
+								<div class="file">
+									<label>行驶证</label>
+									<input id="openfile" type="file"/>
+									<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+								</div>
+								<form class="form-inline">
+									<div class="form-group">
+										<label>有效期</label>
+										<input type="text" class="form-control">
+									</div>
+
+									<div class="form-group">
+										<label>下次年检日期</label>
+										<input type="text" class="form-control" >
+									</div>
+								</form>
+							</div>
+
+							<div>
+								<br>
+								<div class="file">
+									<label>运营证</label>
+									<input id="openfile" type="file"/>
+									<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+								</div>
+								<form class="form-inline">
+									<div class="form-group">
+										<label>有效期</label>
+										<input type="text" class="form-control">
+									</div>
+
+									<div class="form-group">
+										<label>下次年检日期</label>
+										<input type="text" class="form-control" >
+									</div>
+								</form>
+							</div>
+
+							<div>
+								<br>
+								<div class="file">
+									<label>保险单</label>
+									<input id="openfile" type="file"/>
+									<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+								</div>
+								<form class="form-inline">
+									<div class="form-group">
+										<label>有效期</label>
+										<input type="text" class="form-control">
+									</div>
+
+									<div class="form-group">
+										<label>下次投保日期</label>
+										<input type="text" class="form-control" >
+									</div>
+								</form>
+							</div>
+			</div>
+
+
+				</div>
+				<div style="padding-bottom:20px;" id="dange_renzhen2">
+					<hr>
+					<h4>驾驶员进网信息:</h4>
+					<br>
+
+					<form class="form-inline">
+						<div class="form-group">
+							<label>准驾车型</label>
+							<input type="text" class="form-control">
+						</div>
+
+						<div class="form-group">
+							<label>驾驶员姓名</label>
+							<input type="text" class="form-control" >
+						</div>
+
+					</form>
+
+					<div>
+						<br>
+						<div class="file">
+							<label>身份证  </label>
+							<input id="openfile" type="file"/>
+							<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+						</div>
+						<form class="form-inline">
+							<div class="form-group">
+								<label>身份证号</label>
+								<input type="text" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>有效期至</label>
+								<input type="text" class="form-control" >
+							</div>
+							<div class="form-group">
+								<label>住址</label>
+								<input type="text" class="form-control" >
+							</div>
+						</form>
+					</div>
+
+					<div>
+						<br>
+						<div class="file">
+							<label>驾驶证</label>
+							<input id="openfile" type="file"/>
+							<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+						</div>
+						<form class="form-inline">
+							<div class="form-group">
+								<label>证件号码</label>
+								<input type="text" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>有效期至</label>
+								<input type="text" class="form-control" >
+							</div>
+							<div class="form-group">
+								<label>下次审证日期</label>
+								<input type="text" class="form-control" >
+							</div>
+
+						</form>
+					</div>
+
+					<div>
+						<br>
+						<div class="file">
+							<label>从业资格证</label>
+							<input id="openfile" type="file"/>
+							<button type="submit" class="btn btn-default" onclick="file(document.getElementById('openfile'))">选择文件</button>
+						</div>
+						<form class="form-inline">
+							<div class="form-group">
+								<label>证件号码</label>
+								<input type="text" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>有效期至</label>
+								<input type="text" class="form-control" >
+							</div>
+							<div class="form-group">
+								<label>下次审证日期</label>
+								<input type="text" class="form-control" >
+							</div>
+					    	<hr>
+						</form>
+					</div>
+					<center>
+						<button style="margin-bottom:20px;" class="button button-3d button-action button-pill">立即加入，开启最高效的的物流交易</button>
+					</center>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="bot">
+	    <div id="bot_inside">
+			<img id="bot_img" src="images/logo_bot.png">
+			<p id="bot_text">Copyright@2015&nbsp;&nbsp;上海柏运物流版权所有&nbsp;&nbsp;&nbsp; powered by Nodex</p>
+		</div>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	var file = function(files){
+		files.click();
+	}
+</script>
